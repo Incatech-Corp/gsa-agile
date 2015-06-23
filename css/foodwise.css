@@ -122,6 +122,10 @@ a:focus {
     color: #eee;
 }
 
+.navbar-custom .input-group {
+    padding-top: 8px;
+}
+
 .navbar-custom .input-group .btn {
     border-radius: 0 4px 4px 0;
 }
