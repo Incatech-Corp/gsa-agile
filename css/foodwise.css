@@ -320,6 +320,9 @@ a:focus {
 .content-section {
     padding-top: 100px;
 }
+#about{
+	padding-top: 50px
+}
 
 .download-section {
     width: 100%;
