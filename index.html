@@ -258,18 +258,18 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <a href="" class="data-button geomap-button"></a>
-                        <h4 class="service-heading">GeoMap</h4>
+                        <a href="" class="data-button geomap-button" data-toggle="modal" data-target=".report-geo">GeoMap</a>                        
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report-geo">See Report</button></p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
-                        <a href="" class="data-button circle-button"></a>
-                        <h4 class="service-heading">Circle Graph</h4>
+                        <a href="" class="data-button circle-button" data-toggle="modal" data-target=".report-circle">Circle Graph</a>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report-circle">See Report</button></p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
-                        <a href="" class="data-button timeline-button"></a>
-                        <h4 class="service-heading">Timeline</h4>
+                        <a href="" class="data-button timeline-button" data-toggle="modal" data-target=".report-timeline">Timeline</a>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report-timeline">See Report</button></p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                 </div>
@@ -277,33 +277,92 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <!--
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
+<!-- Result modals -->
+
+<div class="modal fade bs-example-modal-lg report-geo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header first-line">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>Last updated on 6-15-2015</p>
+        <h4 class="modal-title" id="myModalLabel">Search Results:</h4>
+      </div>
+      <div class="modal-body report">
+        <h4>GeoMap</h4>
+        <p>Rollover and click on map to view results</p>
+        <h4 class="report-title">
+           Enforcement Reports
+        </h4>
+        <div class="report-detail">
+            <h4>Product Detail:</h4>
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapseProductDetail" aria-expanded="false" aria-controls="collapseProductDetail">
+                          View Detail
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 1 Recall
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
         </div>
-    </section>
--->
-    <!-- Map Section
-    <div id="map"></div>
- -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Footer -->
     <footer>
         <div class="container">

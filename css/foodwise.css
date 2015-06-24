@@ -345,6 +345,10 @@ a.data-button {
     display: inline-block;
     width: 203px;
     height: 203px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 95px;
+    margin-bottom: 10px;
 }
 
 .geomap-button {
@@ -388,8 +392,19 @@ a.data-button {
     font-size: .9em;
 }
 
-.modal-header h4, .modal-header p {
+.modal-body.report h4:first-child, .modal-body.report p:first-child {
     margin-bottom: 0;
+}
+
+.modal-body .report-title {
+    background-color: #ccc;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: .6em .3em;
+}
+
+.modal-body .report-detail {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 #map {
