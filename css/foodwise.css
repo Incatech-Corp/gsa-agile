@@ -371,6 +371,27 @@ a.data-button {
     background: url(../img/timeline_circle_hover_state.png) no-repeat center center;
 }
 
+.modal {
+    color: #000;
+}
+
+.modal-header {
+    line-height: 5px;
+}
+
+.first-line .modal-title, .modal-header.first-line p {
+    margin-top: 25px;
+}
+
+.modal-header.first-line p {
+    float: right;
+    font-size: .9em;
+}
+
+.modal-header h4, .modal-header p {
+    margin-bottom: 0;
+}
+
 #map {
     width: 100%;
     height: 200px;
