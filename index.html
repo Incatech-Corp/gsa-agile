@@ -105,40 +105,46 @@
     <div class="map-geo item active">
       <img src="img/map_for_hero_box_1200x700.png" alt="Geo Map">
       <div class="carousel-caption">
-        <h2>Find the food safety recalls in your locality.</h2>
-        <h5>Use our geomap to see FDA recall information by city and state.</h5>
-        <div class="intro-stats">
-            <h2>8,019</h2>
-            RECALLS SINCE 2004<br />
-            UPDATED 6/15/2015
-        </div>
-        <button class="btn btn-default" type="button">Search</button>
+          <div class="container">
+            <h2>Find the food safety recalls in your locality.</h2>
+            <h5>Use our geomap to see FDA recall information by city and state.</h5>
+            <div class="intro-stats">
+                <h2>8,019</h2>
+                RECALLS SINCE 2004<br />
+                UPDATED 6/15/2015
+            </div>
+            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+          </div>
       </div>
     </div>
     <div class="map-circle item">
       <img src="img/circle-graph_for_hero_box_1200x700.png" alt="Circle Graph">
       <div class="carousel-caption">
-        <h2>Slice and dice our recall data any way you want.</h2>
-        <h5>Our circle graph enables you to dig deeper into our recalls.</h5>
-        <div class="intro-stats">
-            <h2>8,019</h2>
-            RECALLS SINCE 2004<br />
-            UPDATED 6/15/2015
-        </div>
-        <button class="btn btn-default" type="button">Search</button>
+          <div class="container">
+            <h2>Slice and dice our recall data any way you want.</h2>
+            <h5>Our circle graph enables you to dig deeper into our recalls.</h5>
+            <div class="intro-stats">
+                <h2>8,019</h2>
+                RECALLS SINCE 2004<br />
+                UPDATED 6/15/2015
+            </div>
+            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+          </div>
       </div>
     </div>
     <div class="map-time item">
       <img src="img/timeline_for_hero_box_1200x700.png" alt="Timeline">
       <div class="carousel-caption">
-        <h2>Our timeline tool can move mountains of historical data.</h2>
-        <h5>See the most relevant recall data since 2004.</h5>
-        <div class="intro-stats">
-            <h2>8,019</h2>
-            RECALLS SINCE 2004<br />
-            UPDATED 6/15/2015
-        </div>
-        <button class="btn btn-default" type="button">Search</button>
+          <div class="container">
+            <h2>Our timeline tool can move mountains of historical data.</h2>
+            <h5>See the most relevant recall data since 2004.</h5>
+            <div class="intro-stats">
+                <h2>8,019</h2>
+                RECALLS SINCE 2004<br />
+                UPDATED 6/15/2015
+            </div>
+            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+          </div>
       </div>
     </div>
   </div>
@@ -161,7 +167,7 @@
                         <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
                         -->
                         
-                        <a href="#searchFDA" class="btn btn-circle page-scroll">
+                        <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-arrow-circle-down animated"></i>
                         </a>
                     </div>
@@ -188,6 +194,10 @@
                     <hr class="section-heading-spacer">
                  </div>
          </div>
+                        
+                        <a href="#searchFDA" class="btn btn-circle page-scroll">
+                            <i class="fa fa-arrow-circle-down animated"></i>
+                        </a>
     </section>
 
     <!-- Download Section -->
@@ -258,18 +268,18 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <a href="" class="data-button geomap-button" data-toggle="modal" data-target=".report-geo">GeoMap</a>                        
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report-geo">See Report</button></p>
+                        <a href="" class="data-button geomap-button" data-toggle="modal" data-target=".results-geomap">GeoMap</a>                        
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-geomap">Open Results</button></p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
-                        <a href="" class="data-button circle-button" data-toggle="modal" data-target=".report-circle">Circle Graph</a>
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report-circle">See Report</button></p>
+                        <a href="" class="data-button circle-button" data-toggle="modal" data-target=".results-circle">Circle Graph</a>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-circle">Open Results</button></p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
-                        <a href="" class="data-button timeline-button" data-toggle="modal" data-target=".report-timeline">Timeline</a>
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report-timeline">See Report</button></p>
+                        <a href="" class="data-button timeline-button" data-toggle="modal" data-target=".results-timeline">Timeline</a>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-timeline">Open Results</button></p>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                 </div>
@@ -278,8 +288,8 @@
     </section>
 
 <!-- Result modals -->
-
-<div class="modal fade bs-example-modal-lg report-geo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<!-- Geo results -->
+<div class="modal fade bs-example-modal-lg results-geomap" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header first-line">
@@ -288,8 +298,11 @@
         <h4 class="modal-title" id="myModalLabel">Search Results:</h4>
       </div>
       <div class="modal-body report">
-        <h4>GeoMap</h4>
-        <p>Rollover and click on map to view results</p>
+        <div class="text-center">
+          <h4>GeoMap</h4>
+          <p>Rollover and click on map to view results</p>
+          <img src="img/map_for_tool_359x347.png" alt="placeholder" />
+        </div>
         <h4 class="report-title">
            Enforcement Reports
         </h4>
@@ -302,8 +315,8 @@
                   <td>
                       Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
                   <td>
-                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapseProductDetail" aria-expanded="false" aria-controls="collapseProductDetail">
-                          View Detail
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-geomap .collapseProductDetail" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
                        </button>
                   </td>
              </tr>
@@ -312,6 +325,8 @@
                   <td>
                       Class 1 Recall
                   </td>
+                  <td>
+                  </td>
              </tr>
              <tr class="collapse collapseProductDetail">
                   <td>
@@ -319,6 +334,8 @@
                   </td>
                   <td>
                       F-2347-2015
+                  </td>
+                  <td>
                   </td>
              </tr>
               <tr class="collapse collapseProductDetail">
@@ -355,14 +372,866 @@
               </tbody>
           </table>
         </div>
+        <div class="report-detail">
+            <h4>Event Detail:</h4>
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Event ID</td>
+                  <td>
+                      71165
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Product Type</td>
+                  <td>
+                      Food
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Status
+                  </td>
+                  <td>
+                      Ongoing
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      City
+                  </td>
+                  <td>
+                      4 Him Food Group LLC
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      State
+                  </td>
+                  <td>
+                      OR
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Country
+                  </td>
+                  <td>
+                      US
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Voluntary/Mandated
+                  </td>
+                  <td>
+                      Voluntary: Firm Initiated
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Recall Initiation Date
+                  </td>
+                  <td>
+                      2015-05-01
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Initial Firm Notification of Consignee or Public
+                  </td>
+                  <td>
+                      Telephone
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-geomap .collapseProductDetail2" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 2 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-geomap .collapseProductDetail3" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 3 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close Results</button>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Circle results -->
+<div class="modal fade bs-example-modal-lg results-circle" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header first-line">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>Last updated on 6-15-2015</p>
+        <h4 class="modal-title" id="myModalLabel">Search Results:</h4>
+      </div>
+      <div class="modal-body report">
+        <div class="text-center">
+            <h4>Circle Graph</h4>
+            <p>Rollover and click on graph to view results</p>
+            <img src="img/circle_graph_for_tool_359x347.png" alt="placeholder" />
+        </div>
+        <h4 class="report-title">
+           Enforcement Reports
+        </h4>
+        <div class="report-detail">
+            <h4>Product Detail:</h4>
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-circle .collapseProductDetail" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 1 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+            <h4>Event Detail:</h4>
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Event ID</td>
+                  <td>
+                      71165
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Product Type</td>
+                  <td>
+                      Food
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Status
+                  </td>
+                  <td>
+                      Ongoing
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      City
+                  </td>
+                  <td>
+                      4 Him Food Group LLC
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      State
+                  </td>
+                  <td>
+                      OR
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Country
+                  </td>
+                  <td>
+                      US
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Voluntary/Mandated
+                  </td>
+                  <td>
+                      Voluntary: Firm Initiated
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Recall Initiation Date
+                  </td>
+                  <td>
+                      2015-05-01
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Initial Firm Notification of Consignee or Public
+                  </td>
+                  <td>
+                      Telephone
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-circle .collapseProductDetail2" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 2 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-circle .collapseProductDetail3" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 3 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close Results</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Timeline results -->
+<div class="modal fade bs-example-modal-lg results-timeline" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header first-line">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>Last updated on 6-15-2015</p>
+        <h4 class="modal-title" id="myModalLabel">Search Results:</h4>
+      </div>
+      <div class="modal-body report">
+        <div class="text-center">
+            <h4>Timeline</h4>
+            <p>Rollover and click on timeline to view results</p>
+            <img src="img/timeline_for_tool_359x347.png" alt="placeholder" />
+        </div>
+        <h4 class="report-title">
+           Enforcement Reports
+        </h4>
+        <div class="report-detail">
+            <h4>Product Detail:</h4>
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-timeline .collapseProductDetail" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 1 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+            <h4>Event Detail:</h4>
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Event ID</td>
+                  <td>
+                      71165
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Product Type</td>
+                  <td>
+                      Food
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Status
+                  </td>
+                  <td>
+                      Ongoing
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      City
+                  </td>
+                  <td>
+                      4 Him Food Group LLC
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      State
+                  </td>
+                  <td>
+                      OR
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Country
+                  </td>
+                  <td>
+                      US
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Voluntary/Mandated
+                  </td>
+                  <td>
+                      Voluntary: Firm Initiated
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Recall Initiation Date
+                  </td>
+                  <td>
+                      2015-05-01
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr>
+                  <td>
+                      Initial Firm Notification of Consignee or Public
+                  </td>
+                  <td>
+                      Telephone
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-timeline .collapseProductDetail2" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 2 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail2">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="report-detail">
+          <table class="table">
+              <tbody>
+              <tr>
+                  <td>Product Description</td>
+                  <td>
+                      Salted Caramel Premium Pued Corn, Cosmo Creations brand, Nitrogen filled, UPC 8 51710 001</td>
+                  <td>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".results-timeline .collapseProductDetail3" aria-expanded="false" aria-controls="collapseProductDetail">
+                          <span class="view-detail">View Detail</span><span class="hide">Close Detail</span>
+                       </button>
+                  </td>
+             </tr>
+              <tr>
+                  <td>Classification</td>
+                  <td>
+                      Class 3 Recall
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+             <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Recall Number
+                  </td>
+                  <td>
+                      F-2347-2015
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Code Info
+                  </td>
+                  <td>
+                      Lot 040815 Best by Date 2/6/16; Lot 041015 Best by Date 2/8/16;<br />
+                      Lot 041315 Best by Date 2/11/16.
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      33,240 packages
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              <tr class="collapse collapseProductDetail3">
+                  <td>
+                      Product distributed Qty
+                  </td>
+                  <td>
+                      Cosmos Creations-Salted Caramel Premium Pued Corn, 14 oz., is recalled because the nutrition facts panel declared 0 (zero) gram sugar while it should have been 13 grams sugar per serving
+                  </td>
+                  <td>
+                  </td>
+             </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close Results</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Footer -->
     <footer>
         <div class="container">

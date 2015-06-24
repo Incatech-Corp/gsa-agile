@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
+    margin: 0 0 10px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -126,10 +126,6 @@ a:focus {
     padding-top: 8px;
 }
 
-.navbar-custom .input-group .btn {
-    border-radius: 0 4px 4px 0;
-}
-
 @media(min-width:768px) {
     .navbar-custom {
         padding: 20px 0;
@@ -223,13 +219,13 @@ a:focus {
 }
 
 .carousel-caption {
-	height: 300px;
     background-color: rgba(0,0,0,.8);
     right: 0;
     left: 0;
     bottom: 0;
+    height: 300px;
     text-align: left;
-    padding: 4em;
+    padding: 4em 0;
 }
 
 .carousel-caption h2 {
@@ -321,9 +317,13 @@ a:focus {
 .content-section {
     padding-top: 100px;
 }
-#about{
-	padding-top: 20px
-	padding-bottom: 20px
+
+#about {
+    padding-top: 80px;
+}
+
+#about .btn-circle {
+    margin-top: 50px;
 }
 
 .download-section {
@@ -392,19 +392,47 @@ a.data-button {
     font-size: .9em;
 }
 
-.modal-body.report h4:first-child, .modal-body.report p:first-child {
+.modal-body.report .text-center {
+    padding-bottom: 1em;
+}
+
+.modal-body.report h4:first-child, .modal p {
     margin-bottom: 0;
 }
 
 .modal-body .report-title {
     background-color: #ccc;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
     padding: .6em .3em;
 }
 
 .modal-body .report-detail {
+    padding-top: 8px;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-body .report-detail h4 {
+    font-size: .9em;
+}
+
+.modal-body .report-detail .btn {
+    background-color: #ccc;
+    border: 1px solid #e5e5e5;
+}
+
+.modal-body .report-detail table td {
+    border: 0;
+}
+
+.modal-body .report-detail table tr td:last-child {
+    width: 120px;
+}
+
+@media(min-width:767px) {
+    .modal-body .report-detail table tr td:first-child {
+        width: 25%;
+    }
 }
 
 #map {
@@ -429,7 +457,6 @@ a.data-button {
 }
 
 .btn {
-    border-radius: 0;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
