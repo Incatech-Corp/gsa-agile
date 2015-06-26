@@ -193,6 +193,12 @@ a:focus {
     }
 }
 
+@media(max-width:768px) {
+    .intro .row {
+        margin-top: 160px;
+    }
+}
+
 .map-geo {
     background-color: #ccccff;
 }
@@ -222,23 +228,41 @@ a:focus {
     margin-bottom: .3em;
 }
 
-@media(min-width:992px) {
+@media(min-width:768px) {
     .carousel-caption {
         height: 300px;
+    }
+    
+    .mobile-caption {
+        visibility: hidden;        
     }
 }
 
 @media(max-width:768px) {
     .carousel {
-        height: 100%;
+        height: 120%;
+        margin-top: 60px;
+    }
+
+    .carousel-indicators {
+      top: 100px;
+    }
+    
+    .carousel-caption {
+        top: 80px;
     }
     
     .carousel-caption h2 {
         font-size: 1.5em;
     }
-
-    .carousel-indicators {
-      bottom: 30px;
+    
+    .carousel-caption .intro-stats, .carousel-caption a.page-scroll {
+        visibility: hidden;
+    }
+    
+    .mobile-caption {
+        text-align: left;  
+        margin-top: 50px; 
     }
 }
 
