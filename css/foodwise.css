@@ -162,6 +162,7 @@ a:focus {
     height: auto;
     padding: 0;
     text-align: center;
+    vertical-align: top;
     color: #fff;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
@@ -173,7 +174,6 @@ a:focus {
 
 .intro .intro-body {
     display: table-cell;
-    vertical-align: middle;
 }
 
 .intro .intro-body .brand-heading {
@@ -339,6 +339,16 @@ a:focus {
 
 .section-subheading {
     text-align: left;
+}
+
+.download-section .input-group .form-control {
+    float: right;
+    width: 75%;
+}
+
+.download-section .input-group label {
+    width: 25%;
+    height: 34px;
 }
 
 a.data-button {
