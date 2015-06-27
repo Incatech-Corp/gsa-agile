@@ -199,16 +199,16 @@ a:focus {
     }
 }
 
+.map-heat {
+    background-color: rgba(191,197,239, 1);
+}
+
+.map-wordcloud {
+    background-color: rgba(254,211,91, 1);
+}
+
 .map-geo {
-    background-color: #ccccff;
-}
-
-.map-circle {
-    background-color: #ffffcc;
-}
-
-.map-time {
-    background-color: #ccff99;
+    background-color: rgba(173,215,215, 1);
 }
 
 .carousel-indicators {
