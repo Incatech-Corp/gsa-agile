@@ -17,17 +17,44 @@ html {
     height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
     margin: 0 0 10px;
-    text-transform: uppercase;
+	font-family: Museo Sans"museo sans 700", Helvetica,Arial,sans-serif;
+    font-weight: 700;
+	font-size: 47px;
+	letter-spacing: 0px;
+}
+
+h2 {
+    margin: 0 0 10px;
     font-family: Museo Sans"museo sans 700", Helvetica,Arial,sans-serif;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-family: Museo Sans"museo sans 700", Helvetica,Arial,sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+    letter-spacing: 0px;
+}
+
+h4,
+
+h5 {
+	margin: 0 0 10px;
+	font-family: Museo Sans"museo sans 500", Helvetica,Arial,sans-serif;
+    font-weight: 500;
+	font-size: 22px;
+    letter-spacing: 0px;
+}
+
+h6 {
+    margin: 0 0 10px;
+    font-family: Museo Sans"museo sans 700", Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 0px;
 }
 
 p {
@@ -126,11 +153,15 @@ a:focus {
     padding-top: 8px;
 }
 
+.top-buffer { 
+	margin-top:25px; 
+}
+
 @media(min-width:768px) {
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
         //background: 0 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -239,6 +270,32 @@ a:focus {
 }
 
 @media(max-width:768px) {
+	
+	h1 {
+    margin: 0 0 10px;
+	font-family: Museo Sans"museo sans 700", Helvetica,Arial,sans-serif;
+    font-weight: 700;
+	font-size: 27px;
+	letter-spacing: 0px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-family: Museo Sans"museo sans 700", Helvetica,Arial,sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+    letter-spacing: 0px;
+}
+
+	h5 {
+	margin: 0 0 10px;
+	font-family: Museo Sans"museo sans 500", Helvetica,Arial,sans-serif;
+    font-weight: 500;
+	font-size: 14px;
+    letter-spacing: 0px;
+}
+
+	
     .carousel {
         height: 120%;
         margin-top: 60px;
@@ -349,11 +406,12 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 #about {
-    padding-top: 80px;
+    padding-top: 0px;
 }
 
 #about .btn-circle {
@@ -389,6 +447,7 @@ a:focus {
     height: 34px;
     text-align: left;
     vertical-align: middle;
+	font-weight: 500
 }
 
 a.data-button {
