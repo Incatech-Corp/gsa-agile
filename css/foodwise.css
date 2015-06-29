@@ -271,7 +271,7 @@ a:focus {
 	}
 
 	.carousel-indicators {
-  		bottom: 20px;
+  		bottom: 30px;
 	}
 
 	.carousel-caption {
@@ -391,7 +391,7 @@ h5 {
     border: 2px solid #fff;
     border-radius: 100%!important;
     font-size: 68px;
-    color: #fff;
+    color: rgba(255,255,255,.5);
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -409,6 +409,7 @@ h5 {
     display: block;
     margin: 0;
     margin-left: 1px;
+	color: rgba(255,255,255,.5);
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
     -moz-transition-property: -moz-transform;
