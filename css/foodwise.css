@@ -281,6 +281,13 @@ a:focus {
     	text-align: left;
     	padding: 2em 0;
 	}
+	
+	.heatmap-section-caption {
+    	margin-top: .3em;
+		margin-left: 10px;
+    	text-align: left;
+    	padding: 2em 0;
+	}
 
 	.carousel-caption h2 {
    	 	margin-bottom: .3em;
@@ -473,6 +480,17 @@ h5 {
     margin: 1em 0;
 }
 
+.livemap-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #000;
+    background-color: #d1e6fd;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .section-subheading {
     text-align: left;
 }
@@ -622,6 +640,7 @@ a.data-button {
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+
 
 .btn-default {
     border: 1px solid #00529b;
