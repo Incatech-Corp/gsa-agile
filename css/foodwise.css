@@ -238,7 +238,7 @@ a:focus {
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
 	
     .intro .row {
         margin-top: 160px;
@@ -293,7 +293,7 @@ a:focus {
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
 	
 h1 {
     margin: 0 0 10px;
@@ -476,31 +476,37 @@ h5 {
 
 .download-section .input-group .form-control {
     float: right;
-	font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
+    font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
     width: 70%;
 }
 
 .download-section .input-group label {
-    width: 25%;
+    width: 30%;
     height: 46px;
-	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
+    font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
     text-align: left;
     vertical-align: middle;
+}
+
+@media(max-width:767px) {
+    .download-section .input-group {
+        width: 100%;
+    }
 }
 
 a.data-button {
     display: inline-block;
     width: 203px;
     height: 203px;
-	color: #ffffff;
-	text-shadow: 0px 0px 32px rgba(0,0,0,1);
-	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
+    color: #ffffff;
+    text-shadow: 0px 0px 32px rgba(0,0,0,1);
+    font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
     font-size: 1.5em;
     padding-top: 95px;
     margin-bottom: 10px;
