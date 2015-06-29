@@ -46,7 +46,15 @@ h3 {
     letter-spacing: 0px;
 }
 
-h4,
+h4 {
+    margin: 0 0 10px;
+    font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 20px;
+    letter-spacing: 0px;
+}
+
 
 h5 {
 	margin: 0 0 10px;
@@ -263,7 +271,7 @@ a:focus {
 	}
 
 	.carousel-indicators {
-  		bottom: 250px;
+  		bottom: 20px;
 	}
 
 	.carousel-caption {
