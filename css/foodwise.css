@@ -52,8 +52,8 @@ h5 {
 	margin: 0 0 10px;
 	font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
 	font-weight: normal;
-	font-style: normal
-	font-size: 22px;
+	font-style: normal;
+	font-size: 16px;
     letter-spacing: 0px;
 }
 
@@ -168,6 +168,8 @@ a:focus {
 .top-buffer { 
 	margin-top:25px; 
 }
+
+	
 
 @media(min-width:768px) {
     .navbar-custom {
@@ -450,7 +452,7 @@ h5 {
 }
 
 #about .btn-circle {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .download-section {
@@ -477,7 +479,7 @@ h5 {
 	font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
 	font-weight: normal;
 	font-style: normal;
-    width: 75%;
+    width: 70%;
 }
 
 .download-section .input-group label {
@@ -637,7 +639,15 @@ ul.banner-social-buttons {
 }
 
 @media(max-width:767px) {
-    ul.banner-social-buttons li {
+    .logo {
+    display: box;
+    background: url(../img/foodrecallus_logo_300x32.png) no-repeat left center;
+    width: 300px;
+    height: 32px;
+    margin-top: 5px;
+}
+
+ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;
         padding: 0;
@@ -646,6 +656,44 @@ ul.banner-social-buttons {
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
     }
+}
+
+@media(max-width:480px) {
+.logo {
+    display: box;
+    background: url(../img/foodrecallus_logo_279x25.png) no-repeat left center;
+    width: 279px;
+    height: 25px;
+    margin-top: 5px;
+}
+
+h1 {
+    margin: 0 0 10px;
+	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 23px;
+	letter-spacing: 0px;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+    letter-spacing: 0px;
+}
+
+h3 {
+	margin: 0 0 10px;
+	font-family: MuseoSans-300, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 12px;
+	letter-spacing: 0px;
+}
+
 }
 
 footer {
