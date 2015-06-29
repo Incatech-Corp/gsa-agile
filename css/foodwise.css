@@ -33,7 +33,7 @@ h2 {
  	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 37px;
+	font-size: 32px;
     letter-spacing: 0px;
 }
 
@@ -544,6 +544,9 @@ a.data-button {
 }
 
 .modal-body.report .text-center {
+	font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-style: normal;
     padding-bottom: 1em;
 }
 
