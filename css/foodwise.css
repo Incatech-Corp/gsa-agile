@@ -252,6 +252,11 @@ a:focus {
 	.map-wordcloud {
     	background-color: rgba(254,211,91, 1);
 	}
+	
+	.map-timeline  {
+		background-color: rgba(172,227,32, 1);
+	}
+
 
 	.map-geo {
     	background-color: rgba(173,215,215, 1);
@@ -271,12 +276,10 @@ a:focus {
 	}
 	
 	.section-caption {
-    	background-color: rgba(0,0,0,.8);
-    	right: 0;
-    	left: 0;
-    	bottom: 0;
+    	margin-top: .3em;
+		margin-left: 10px;
     	text-align: left;
-    	padding: 4em 0;
+    	padding: 2em 0;
 	}
 
 	.carousel-caption h2 {
