@@ -267,6 +267,15 @@ a:focus {
     	text-align: left;
     	padding: 4em 0;
 	}
+	
+	.section-caption {
+    	background-color: rgba(0,0,0,.8);
+    	right: 0;
+    	left: 0;
+    	bottom: 0;
+    	text-align: left;
+    	padding: 4em 0;
+	}
 
 	.carousel-caption h2 {
    	 	margin-bottom: .3em;
@@ -470,13 +479,12 @@ h5 {
 
 .download-section .input-group label {
     width: 25%;
-    height: 37px;
-	font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
+    height: 46px;
+	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
 	font-weight: normal;
 	font-style: normal;
     text-align: left;
     vertical-align: middle;
-	font-weight: 500
 }
 
 a.data-button {
