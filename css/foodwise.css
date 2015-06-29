@@ -474,6 +474,9 @@ h5 {
 
 .download-section .input-group .form-control {
     float: right;
+	font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	font-style: normal;
     width: 75%;
 }
 
