@@ -615,6 +615,16 @@ a.data-button {
     width: 120px;
 }
 
+.wordcloud {
+		border: 0px solid #036;
+		background-color: rgba(254,211,91, 1);
+		width: 100%;
+		height: auto;
+		padding: 10px;
+		page-break-after: always;
+		page-break-inside: avoid;
+}
+
 @media(min-width:767px) {
     .modal-body .report-detail table tr td:first-child {
         width: 25%;
