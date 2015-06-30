@@ -365,11 +365,11 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 </div>
                 <div class="row text-center">
                
-                    <form action="" method="post">
+                    <form action="get_search_results.php" method="get">
                       <div class="col-sm-4">
                         <div class="input-group">
-                          <label id="product">Product: </label> 
-                          <input id="product" name="product" type="text" class="form-control" value="">
+                          <label id="description">Product: </label> 
+                          <input id="description" name="description" type="text" class="form-control" value="">
                           <label id="reason">Reason<br>
                             for Recall: </label>
                           <input id="reason" name="reason" type="text" class="form-control" value="">                          
@@ -377,16 +377,16 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                       </div><!-- /.col-sm-4 -->
                       <div class="col-sm-4">
                         <div class="input-group">
-                              <label id="severity">Severity: </label> 
-                              <select id="severity" name="severity" class="form-control">
-                                  <option value="">Select the Severity</option>
+                              <label id="class">Severity: </label> 
+                              <select id="class" name="class" class="form-control">
+                                  <option selected="selected">Select the Severity</option>
                                   <option value="Class I">Class I Recall (most critical)</option>
                                   <option value="Class II">Class II Recall (most critical)</option>
                                   <option value="Class III">Class III Recall (less critical)</option>
                               </select>       
                           <label id="state">State: </label> 
                           <select id="state" name="state" class="form-control">
-                              <option value="" selected="selected">Select a State</option>
+                              <option selected="selected">Select a State</option>
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
     <option value="AZ">Arizona</option>
