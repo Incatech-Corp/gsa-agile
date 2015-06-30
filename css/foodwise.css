@@ -87,7 +87,7 @@ p {
     }
 }
 
-a {
+a, #livemap i.animated, #searchFDA i.animated {
     color: #00529b;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -347,7 +347,7 @@ h5 {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 14px;
-    letter-spacing: 0px;
+        letter-spacing: 0px;
 }
 
 	
@@ -462,11 +462,6 @@ h5 {
 }
 
 .content-section {
-    padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-#about {
     padding-top: 0px;
 }
 
@@ -584,9 +579,9 @@ a.data-button {
 }
 
 .modal-body.report .text-center {
-	font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
+    font-family: MuseoSans-500,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
     padding-bottom: 1em;
 }
 
@@ -631,7 +626,7 @@ a.data-button {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 3em;
     }
 
     .download-section {
@@ -733,6 +728,15 @@ h3 {
 
 }
 
+#searchResults .download-section {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.tabular-results {
+    padding-bottom: 2em;
+}
+
 footer {
     background-color: #3c3f47;
     color: #828f95;
@@ -743,6 +747,7 @@ footer p {
     font-size: .9em;
     margin: 0;
     padding-left: 100px;
+    text-align: left;
 }
 
 .logo-FDA {

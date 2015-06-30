@@ -165,7 +165,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
             <div class="intro-stats">
                 <h2>8,019</h2>
                 TOTAL RECALLS TO DATE</div>
-            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+            <a href="#livemap" class="btn btn-default page-scroll">View Heat Map</a>
           </div>
       </div>
     </div>
@@ -180,7 +180,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
             <div class="intro-stats">
                 <h2>8,019</h2>
                 2015 TOTAL RECALLS TO DATE </div>
-            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+            <a href="#searchFDA" class="btn btn-default page-scroll">View Tag Cloud</a>
           </div>
       </div>
     </div>
@@ -195,7 +195,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
             <div class="intro-stats">
                 <h2>8,019</h2>
                 2015 TOTAL RECALLS TO DATE </div>
-            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+            <a href="#searchFDA" class="btn btn-default page-scroll">View Timeline</a>
           </div>
       </div>
     </div>
@@ -211,7 +211,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 <h2>8,019</h2>
                 2015 TOTAL RECALLS TO DATE <br>
             </div>
-            <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
+            <a href="#searchFDA" class="btn btn-default page-scroll">View GeoMap</a>
           </div>
       </div>
     </div>
@@ -232,17 +232,18 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                     <h2>8,019</h2>
                     TOTAL RECALLS TO DATE
                 </div>
-                <a href="#searchFDA" class="btn btn-default page-scroll">Search</a>
-</div>
-           
+                <a href="#searchResults" class="btn btn-default page-scroll">Search Results</a>
+            </div>
+            <a href="#about" class="btn btn-circle page-scroll">
+                 <i class="fa fa-arrow-circle-down animated"></i>
+             </a>
+      </div>
+    </header>
 
 
     <!-- About Section -->
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
-    <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-arrow-circle-down animated"></i>
-      </a>
         <div class="row">
         <div class="section-caption">
                     
@@ -294,13 +295,53 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                             <i class="fa fa-arrow-circle-down animated"></i>
                         </a>
     </section>
-<!-- Download Section -->
+<!-- Graph Section -->
     <section>
         <div id="searchFDA" class="download-section">
             <div class="container">
+  <div class="top-buffer"></div>
+
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="section-subheading text-muted">1. Search FDA food recall action data</h2>
+                        <h2 class="section-subheading text-muted">Display Historical Data as:</h2>
+                    </div>
+                </div>
+              
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <a href="" class="data-button geomap-button" data-toggle="modal" data-target=".results-geomap">GeoMap</a>                        
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-geomap">View Results</button></p>
+                        <p class="text-muted">Shows number of recalls by state and severity.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="" class="data-button tagcloud-button" data-toggle="modal" data-target=".results-circle">Word Cloud</a>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-circle">View Results</button></p>
+                        <p class="text-muted">Shows reasons for recall by order of magnitude.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="" class="data-button timeline-button" data-toggle="modal" data-target=".results-timeline">Timeline</a>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-timeline">View Results</button></p>
+                        <p class="text-muted">Shows recalls by <br>
+                          severity over time.</p>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                        <a href="#searchResults" class="btn btn-circle page-scroll">
+                            <i class="fa fa-arrow-circle-down animated"></i>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Search Result Section -->
+    <section id="searchResults">
+        <div class="download-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="section-subheading text-muted">Search FDA food recall action data:</h2>
                     </div>
                 </div>
                 <div class="row text-center">
@@ -388,29 +429,8 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 </div><!-- /.row -->
   <div class="top-buffer"></div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="section-subheading text-muted">2. See your search results as:</h2>
-                    </div>
-                </div>
-              
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <a href="" class="data-button geomap-button" data-toggle="modal" data-target=".results-geomap">GeoMap</a>                        
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-geomap">View Results</button></p>
-                        <p class="text-muted">Shows number of recalls by state and severity.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="" class="data-button tagcloud-button" data-toggle="modal" data-target=".results-circle">Word Cloud</a>
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-circle">View Results</button></p>
-                        <p class="text-muted">Shows reasons for recall by order of magnitude.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="" class="data-button timeline-button" data-toggle="modal" data-target=".results-timeline">Timeline</a>
-                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".results-timeline">View Results</button></p>
-                        <p class="text-muted">Shows recalls by <br>
-                          severity over time.</p>
-                    </div>
+                <div class="row text-center tabular-results">
+                    <!-- tabular results -->
                 </div>
             </div>
         </div>
