@@ -781,6 +781,16 @@ ul.banner-social-buttons li {
     padding-bottom: 2em;
 }
 
+.tabular-results td:first-child, .tabular-results td:nth-child(2), .tabular-results th:first-child, .tabular-results th:nth-child(2) {
+    width: 15%;
+}
+
+@media(min-width:992px) {
+    .tabular-results td:first-child, .tabular-results td:nth-child(2), .tabular-results th:first-child, .tabular-results th:nth-child(2){
+        width: 10%; 
+    }
+}
+
 table.dataTable thead .sorting {
     background-image: url("https://cdn.datatables.net/1.10.7/images/sort_both.png")
 }
