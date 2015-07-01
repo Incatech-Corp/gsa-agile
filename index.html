@@ -86,9 +86,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     }
 
     var oReq = new XMLHttpRequest(); //New request object
-  
     
-  	debugger;
     oReq.open("get", "get-class.php", false);
    
     oReq.send();
@@ -113,6 +111,85 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
         chart.draw(data, {displayAnnotations: true, width: '100%', height: '100%'});
 		     table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
       }
+    </script>
+    
+        <script type='text/javascript'>
+           function recallResults() {
+                        debugger;
+               var formState = document.getElementById("searchRecall").elements["state"].value;
+               var formReason = document.getElementById("searchRecall").elements["reason"].value;
+               var formDescription = document.getElementById("searchRecall").elements["description"].value;
+               var formClass = document.getElementById("searchRecall").elements["class"].value;
+               
+               var queryFile = "array_results.php";
+               
+               if (formState.length > 0) {
+                   if (queryFile.indexOf("?") > 0) {
+                        queryFile = queryFile + "&state=" + formState;                       
+                   } else {
+                        queryFile = queryFile + "?state=" + formState;
+                   }
+               }
+               
+               if (formReason.length > 0) {
+                   if (queryFile.indexOf("?") > 0) {
+                        queryFile = queryFile + "&reason=" + formReason;                       
+                   } else {
+                        queryFile = queryFile + "?reason=" + formReason;
+                   }
+               }
+               
+               if (formDescription.length > 0) {
+                   if (queryFile.indexOf("?") > 0) {
+                        queryFile = queryFile + "&description=" + formDescription;                       
+                   } else {
+                        queryFile = queryFile + "?description=" + formDescription;
+                   }
+               }
+               
+               if (formClass.length > 0) {
+                   if (queryFile.indexOf("?") > 0) {
+                        queryFile = queryFile + "&class=" + formState;                       
+                   } else {
+                        queryFile = queryFile + "?class=" + formState;
+                   }
+               }
+               
+               google.load('visualization', '1', {'packages':['annotationchart','table']});
+               var data = new google.visualization.DataTable();
+               var oReq = new XMLHttpRequest(); //New request object
+               var table = new google.visualization.Table(document.getElementById('result_div'));
+               oReq.onreadystatechange=function()
+                  {
+                  if (oReq.readyState==4 && oReq.status==200)
+                    {
+                        debugger;
+                   var result = oReq.responseText;
+                   drawChart(result);
+                    }
+                  }
+
+                oReq.open("get", "array_results.php?description=Spinach", true);
+                oReq.send();
+
+
+
+
+              function drawChart(result) {
+
+                data.addColumn('date', 'Date');
+                data.addColumn('string', 'Severity');
+                data.addColumn('string', 'Product Description');
+                data.addColumn('string', 'Reason for Recall');
+
+                           for(i = 0; i < result.length; i++) {
+                                data.addRow(
+                  [new Date(result[i].report), result[i].class, result[i].description, result[i].reason]
+                  );
+                                      }
+                       table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+              }
+           }
     </script>
 
 </head>
@@ -365,7 +442,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 </div>
                 <div class="row text-center">
                
-                    <form action="get_search_results.php" method="get">
+                    <form id="searchRecall" name="searchRecall">
                       <div class="col-sm-4">
                         <div class="input-group">
                           <label id="description">Product: </label> 
@@ -442,7 +519,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                         </div><!-- /input-group -->
                       </div><!-- /.col-sm-4 -->
                       <div class="col-sm-4">         
-                            <input class="btn btn-default form-control" type="submit" value="Search">
+                            <input class="btn btn-default form-control" type="button" value="Search" onclick="javascript:recallResults()">
                       </div><!-- /.col-sm-4 -->
                     </form>
                 </div><!-- /.row -->
@@ -453,7 +530,10 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 			<div class="col-sm-12">
                             <h2 class="section-subheading text-muted">Search results:</h2>
                         </div>
+                        <div id='result_div'></div>
+                        
 				<!--<div class="table table-responsive"> -->
+                                <!-- 
 					<table id="example" class="table table-striped table-responsive dataTable">
 						<thead>
 							<tr role="row">
@@ -507,7 +587,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 								<td role="row">Product contained undeclared ingredients (peanuts)</td>
 							</tr>
 						</tbody>
-					</table>
+					</table>  -->
 				<!-- </div><!-- /.table-responsive -->							
 			</div>
 			<div><p>Whatever content below table</p></div>
