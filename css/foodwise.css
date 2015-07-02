@@ -648,9 +648,16 @@ a.data-button {
     page-break-inside: avoid;
 }
 
-#chart_div {
+.google-visualization-atl {
+    margin-bottom: 3em;
+}
+
+#timeline_chart_div {
+    padding: 0px;
+}   
+
+#geo_chart_div div:first-child div:first-child, #timeline_chart_div div:first-child {
     display: inline-block;
-    margin-bottom: 1em;
 }
 
 .google-visualization-table-table {
