@@ -20,6 +20,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     <!-- Custom CSS -->
     <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
     <link href="css/foodwise.css" rel="stylesheet">
+    <link href="css/amazon.css" rel="stylesheet">
     <link href="css/datepicker.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -83,41 +84,48 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     
     <!-- Timeline Script -->
     <script type='text/javascript'>
-	function reqListener () {
-      console.log(this.responseText);
-    }
-
-    var oReq = new XMLHttpRequest(); //New request object
-    
-    oReq.open("get", "get-class.php", false);
-   
-    oReq.send();
-	var result = JSON.parse(oReq.responseText);
+	function getTimeline()
+	{
+    	var tReg = new XMLHttpRequest(); //New request object
+        tReg.onreadystatechange=function()
+                  {
+                  if (tReg.readyState==4 && tReg.status==200)
+                    {
+                   var result = JSON.parse(tReg.responseText);
+                   drawTimeline(result);
+                    }
+                  }
+   		 tReg.open("get", "get-class.php", false);
+       tReg.send();
+	}
 	
       google.load('visualization', '1', {'packages':['annotationchart','table']});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('date', 'Date');
-        data.addColumn('number', 'Class I');
-        data.addColumn('number', 'Class II');
-        data.addColumn('number', 'Class III');
-		
+      google.setOnLoadCallback(getTimeline);
+	  
+      function drawTimeline(result) {
+        var tdata = new google.visualization.DataTable();
+        tdata.addColumn('date', '');
+        tdata.addColumn('number', 'Class I');
+        tdata.addColumn('number', 'Class II');
+	    tdata.addColumn('number', 'Class III');
+
 	    for(i = 0; i < result.length; i++) {
-	         data.addRow(
-          [new Date(result[i].report), result[i].ClassI, result[i].ClassII, result[i].ClassIII]
+	         tdata.addRow(
+          [new Date(result[i].report), result[i].ClassI,result[i].ClassII, result[i].ClassIII]
           );
 		}
-        var chart = new google.visualization.AnnotationChart(document.getElementById('timeline_chart_div'));
-		 var table = new google.visualization.Table(document.getElementById('timeline_table_div'))
-        chart.draw(data, {displayAnnotations: true, width: '100%', height: '100%'});
-		     table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+        var tchart = new google.visualization.AnnotationChart(document.getElementById('timeline_chart_div'));
+		 var ttable = new google.visualization.Table(document.getElementById('timeline_table_div'))
+        		tchart.draw(tdata, {displayAnnotations: true});
+		    	 ttable.draw(tdata, {showRowNumber: false});
       }
     </script>
     
-    <!-- Search Result Script -->
+     <!-- Search Result Script -->
         <script type='text/javascript'>
            function recallResults() {
+			     google.load('visualization', '1', {'packages':['annotationchart','table']});
+               debugger;
                var formState = document.getElementById("searchRecall").elements["state"].value;
                var formReason = document.getElementById("searchRecall").elements["reason"].value;
                var formDescription = document.getElementById("searchRecall").elements["description"].value;
@@ -157,24 +165,25 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                    }
                }
                
-               google.load('visualization', '1', {'packages':['annotationchart','table']});
-               var data = new google.visualization.DataTable();
-               var oReq = new XMLHttpRequest(); //New request object
-               var table = new google.visualization.Table(document.getElementById('result_div'));
-               oReq.onreadystatechange=function()
+           
+			  
+               var sReq = new XMLHttpRequest(); //New request object
+         
+               sReq.onreadystatechange=function()
                   {
-                  if (oReq.readyState==4 && oReq.status==200)
+                  if (sReq.readyState==4 && sReq.status==200)
                     {
-                   var result = oReq.responseText;
-                   drawChart(result);
+                   var result =  JSON.parse(sReq.responseText);
+                   drawsearch(result);
                     }
                   }
-                  
-                oReq.open("get", queryFile, true);
-                oReq.send();
+                     sReq.open("get", queryFile, true);
+                sReq.send();
+		   }
 
-              function drawChart(result) {
-
+              function drawsearch(result) {
+				 var searchtable = new google.visualization.Table(document.getElementById('search_results'));
+				  var data = new google.visualization.DataTable();
                 data.addColumn('date', 'Date');
                 data.addColumn('string', 'Severity');
                 data.addColumn('string', 'Product Description');
@@ -183,12 +192,45 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                            for(i = 0; i < result.length; i++) {
                                 data.addRow(
                   [new Date(result[i].report), result[i].class, result[i].description, result[i].reason]
-                  );
-                                      }
-                       table.draw(data, {showRowNumber: false, width: '100%', height: '400'});
+                  ); }
+				     searchtable.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+                                  
+                    
               }
-           }
     </script>
+<!--wordmap start -->
+
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://word-cumulus-goog-vis.googlecode.com/svn/trunk/wordcumulus.js"></script>
+    <script type="text/javascript" src="http://word-cumulus-goog-vis.googlecode.com/svn/trunk/swfobject.js"></script>
+	<script src="js/recall.js">
+    </script>
+    <script type="text/javascript">
+      google.load("visualization", "1");
+
+      // Set callback to run when API is loaded
+      google.setOnLoadCallback(drawVisualization);
+
+      // Called when the Visualization API is loaded.
+      function drawVisualization() {
+
+      var jsonData = $.ajax({
+          url: "get-json.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+          
+        // Create and populate a data table.
+        var data = new google.visualization.DataTable(jsonData);
+     
+        // Instantiate our table object.
+        var vis = new gviz_word_cumulus.WordCumulus(document.getElementById('wordmapdiv'));
+
+        // Draw our table with the data we created locally.
+        vis.draw(data, {text_color: '#f69500', speed: 30, width:700, height:500});
+       }
+   </script>
 
     <!-- GeoMap Script -->
     <script type='text/javascript'>
@@ -206,7 +248,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
   			if (oReq.readyState==4 && oReq.status==200)
     		{
 			 	var result = JSON.parse(oReq.responseText);
-		   		drawChart(result);
+		   		drawGeo(result);
     		}
   		}
     oReq.open("get", "get-class-historical.php", true);
@@ -215,7 +257,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 	 
    
 	  
-	function drawChart(result)
+	function drawGeo(result)
 	{
     
         var data = new google.visualization.DataTable();
@@ -492,7 +534,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
                 <div class="row text-center">
                         <a href="#searchResults" class="btn btn-circle page-scroll">
-                            <i class="fa fa-arrow-circle-down animated"></i>
+                        <i class="fa fa-arrow-circle-down animated"></i>
                         </a>
                 </div>
             </div>
@@ -596,67 +638,11 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 <div class="row text-center tabular-results">
                     <!-- tabular results -->
 			<div class="col-sm-12">
-                            <h2 class="section-subheading text-muted">Search results:</h2>
+                            <h2 class="section-subheading text-muted">Search results:</h2><div id='search_results'></div>
                         </div>
-                        <div id='result_div'></div>
+                       
                         
-				<!--<div class="table table-responsive"> -->
-                                <!-- 
-					<table id="example" class="table table-striped table-responsive dataTable">
-						<thead>
-							<tr role="row">
-								<th class="sorting_asc col-xs-3" aria-sort="ascending" aria-label="Date: activate to sort column descending">Date</th>
-								<th class="sorting col-xs-3" aria-label="Severity: activate to sort column ascending">Severity</th>					
-								<th class="sorting col-xs-3" aria-label="Description: activate to sort column ascending">Description</th>
-								<th class="sorting col-xs-3" aria-label="Reason for Recall: activate to sort column ascending">Reason for Recall</th>
-							</tr>
-						</thead>
-                                                <tfoot>
-                                                      <tr>
-                                                          <th colspan="4"></th>
-                                                      </tr>
-                                                 </tfoot>
-
-						<tbody>
-							<tr>					
-								<td role="row">6/23/15</td>
-								<td role="row">Class I</td>
-								<td role="row">Ranch Dressing</td>
-								<td role="row">Product contained undeclared ingredients (peanuts)</td>
-							</tr>
-							<tr>					
-								<td role="row">6/23/15</td>
-								<td role="row">Class I</td>
-								<td role="row">Ranch Dressing</td>
-								<td role="row">Product contained undeclared ingredients (peanuts)</td>
-							</tr>
-							<tr>					
-								<td role="row">6/23/15</td>
-								<td role="row">Class I</td>
-								<td role="row">Ranch Dressing</td>
-								<td role="row">Product contained undeclared ingredients (peanuts)</td>
-							</tr>
-							<tr>					
-								<td role="row">6/23/15</td>
-								<td role="row">Class I</td>
-								<td role="row">Ranch Dressing</td>
-								<td role="row">Product contained undeclared ingredients (peanuts)</td>
-							</tr>
-							<tr>					
-								<td role="row">6/23/15</td>
-								<td role="row">Class I</td>
-								<td role="row">Ranch Dressing</td>
-								<td role="row">Product contained undeclared ingredients (peanuts)</td>
-							</tr>
-							<tr>					
-								<td role="row">6/23/15</td>
-								<td role="row">Class I</td>
-								<td role="row">Ranch Dressing</td>
-								<td role="row">Product contained undeclared ingredients (peanuts)</td>
-							</tr>
-						</tbody>
-					</table>  -->
-				<!-- </div><!-- /.table-responsive -->							
+				
 			</div>
 			<div><p>Whatever content below table</p></div>
                 </div>
@@ -676,6 +662,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
       </div>
       <div class="modal-body report">
         <div class="text-center">
+        <div id='geodescription'>This geomap shows the cumulative number of recalls per state of Class I, Class II and Class III data over the history of the fda reports</div>
             <div id='geo_chart_div'></div>
             <div id='geo_table_div'></div>
         </div>
@@ -697,10 +684,9 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
         <h2 class="modal-title" id="myModalLabel3">View Results by Tag Cloud</h2>
       </div>
       <div class="modal-body report">
-        <div class="text-center">
-           
-            <img src="img/new_word_cloud_for_hero_box_1200x700.png" alt="placeholder" width="100%" height="100%" />
-        </div>
+      <div> The top 25 recall terms in the recalls are listed below click any term to search the FDA site!</div>
+        <div id="wordmapdiv">
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close Results</button>
@@ -719,10 +705,13 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
         <h2 class="modal-title" id="myModalLabel">View Results by Timeline</h2>
       </div>
       <div class="modal-body report">
-        <div>
+              <div id="timelinedesc"> This is the Class I, Class II and Class III recall information since the FDA Reports started. Select timeframe to view from 1 day to a max data set below</div>
+   
+
             <div id='timeline_chart_div'></div>
+         
             <div id='timeline_table_div'></div>
-        </div>
+    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close Results</button>
@@ -747,6 +736,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/foodwise.js"></script>
+    <script src="js/amazon.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
