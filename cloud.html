@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://word-cumulus-goog-vis.googlecode.com/svn/trunk/wordcumulus.js"></script>
+    <script type="text/javascript" src="http://word-cumulus-goog-vis.googlecode.com/svn/trunk/swfobject.js"></script>
+	<script src="js/recall.js"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1");
+
+      // Set callback to run when API is loaded
+      google.setOnLoadCallback(drawVisualization);
+
+      // Called when the Visualization API is loaded.
+      function drawVisualization() {
+		  
+	//var array  = getReason();
+	
+	
+      var jsonData = $.ajax({
+          url: "get-json.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+          
+        // Create and populate a data table.
+        var data = new google.visualization.DataTable(jsonData);
+     
+        // Instantiate our table object.
+        var vis = new gviz_word_cumulus.WordCumulus(document.getElementById('mydiv'));
+
+        // Draw our table with the data we created locally.
+        vis.draw(data, {text_color: '#f69500', speed: 30, width:700, height:500});
+       }
+   </script>
+  </head>
+
+  <body>
+
+        <div id="mydiv"></div>
+        
+  </body>
+</html>

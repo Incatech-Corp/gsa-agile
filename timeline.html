@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+	
+        function reqListener () {
+      console.log(this.responseText);
+    }
+
+    var oReq = new XMLHttpRequest(); //New request object
+  
+    
+  	debugger;
+    oReq.open("get", "get-class.php", false);
+   
+    oReq.send();
+	var result = JSON.parse(oReq.responseText);
+	
+      google.load('visualization', '1', {'packages':['annotationchart','table']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Class I');
+        data.addColumn('number', 'Class II');
+        data.addColumn('number', 'Class III');
+		
+	    for(i = 0; i < result.length; i++) {
+	         data.addRow(
+          [new Date(result[i].report), result[i].ClassI, result[i].ClassII, result[i].ClassIII]
+          );
+		}
+        var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+		 var table = new google.visualization.Table(document.getElementById('table_div'))
+        chart.draw(data, {displayAnnotations: true, width: '100%', height: '100%'});
+		     table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+    </script>
+  </head>
+
+  <body>
+   
+    <div id='chart_div'></div>
+ <div id='table_div'></div>
+  </body>
+</html>

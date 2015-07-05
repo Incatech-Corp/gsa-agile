@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+
+       google.load('visualization', '1', {'packages':['annotationchart','table']});
+ var data = new google.visualization.DataTable();
+    var oReq = new XMLHttpRequest(); //New request object
+         var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+		var table = new google.visualization.Table(document.getElementById('table_div'))
+    oReq.onreadystatechange=function()
+  {
+  if (oReq.readyState==4 && oReq.status==200)
+    {
+   var result = oReq.responseText;
+   drawChart(result);
+    }
+  }
+  	
+    oReq.open("get", "get_search_results_bs.php", true);
+    oReq.send();
+	
+	
+      
+    
+      function drawChart(result) {
+       
+        data.addColumn('date', 'Date');
+        data.addColumn('string', 'Severity');
+        data.addColumn('number', 'Product Description');
+        data.addColumn('number', 'Reason for recall');
+		
+	    for(i = 0; i < result.length; i++) {
+	         data.addRow(
+          [new Date(result[i].Report), result[i].Severity, result[i].Description, result[i].Recall]
+          );
+		}
+         	chart.draw(data, {displayAnnotations: true, width: '100%', height: '100%'});
+		   	table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+    </script>
+  </head>
+  <body>
+  	<div id='chart_div'></div>
+ 	<div id='table_div'></div>
+  </body>
+</html>

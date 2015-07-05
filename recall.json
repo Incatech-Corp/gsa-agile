@@ -1,0 +1,40 @@
+{
+"cols": [
+{"id":"","label":"reason","pattern":"","type":"string"},
+{"id":"","label":"URL","pattern":"","type":"string"}
+],
+"rows": [ {"c":[{"v":"listeria","f":null},{"v":"http://tinyurl.com/na9nuv3","f":null}]},
+ {"c":[{"v":"monocytogenes","f":null},{"v":"http://tinyurl.com/pzemkeg","f":null}]},
+ {"c":[{"v":"contaminated","f":null},{"v":"http://tinyurl.com/p3ga6zj","f":null}]},
+ {"c":[{"v":"peanut","f":null},{"v":"http://tinyurl.com/nqedsst","f":null}]},
+ {"c":[{"v":"salmonella","f":null},{"v":"http://tinyurl.com/on4aja7","f":null}]},
+ {"c":[{"v":"contamination","f":null},{"v":"http://tinyurl.com/pxm86fl","f":null}]},
+ {"c":[{"v":"fresh","f":null},{"v":"http://tinyurl.com/o83d953","f":null}]},
+ {"c":[{"v":"dietary","f":null},{"v":"http://tinyurl.com/qgqkm4f","f":null}]},
+ {"c":[{"v":"supplements","f":null},{"v":"http://tinyurl.com/qx86zfo","f":null}]},
+ {"c":[{"v":"ingredient","f":null},{"v":"http://tinyurl.com/qdqp64t","f":null}]},
+ {"c":[{"v":"cole slaw","f":null},{"v":"http://tinyurl.com/p58crnt","f":null}]},
+ {"c":[{"v":"salads","f":null},{"v":"http://tinyurl.com/qyxzk2u","f":null}]},
+ {"c":[{"v":"ice","f":null},{"v":"http://tinyurl.com/nbzsf5t","f":null}]},
+ {"c":[{"v":"recall","f":null},{"v":"http://tinyurl.com/oew89wa","f":null}]},
+ {"c":[{"v":"milk","f":null},{"v":"http://tinyurl.com/q4a37zt","f":null}]},
+ {"c":[{"v":"garden","f":null},{"v":"http://tinyurl.com/q89d66t","f":null}]},
+ {"c":[{"v":"ready to eat","f":null},{"v":"http://tinyurl.com/p94nal5","f":null}]},
+ {"c":[{"v":"butter","f":null},{"v":"http://tinyurl.com/p3g4oxp","f":null}]},
+ {"c":[{"v":"raw","f":null},{"v":"http://tinyurl.com/op3qjjd","f":null}]},
+ {"c":[{"v":"onions","f":null},{"v":"http://tinyurl.com/orssv6h","f":null}]},
+ {"c":[{"v":"dates","f":null},{"v":"http://tinyurl.com/nwncctu","f":null}]},
+ {"c":[{"v":"cream","f":null},{"v":"http://tinyurl.com/pox6u57","f":null}]},
+ {"c":[{"v":"voluntary","f":null},{"v":"http://tinyurl.com/p8p3hjw","f":null}]},
+ {"c":[{"v":"cheese","f":null},{"v":"http://tinyurl.com/pry5dn3","f":null}]},
+ {"c":[{"v":"contain","f":null},{"v":"http://tinyurl.com/ov7ltxh","f":null}]},
+ {"c":[{"v":"allergens","f":null},{"v":"http://tinyurl.com/o3yys44","f":null}]},
+ {"c":[{"v":"soy","f":null},{"v":"http://tinyurl.com/oyuqzyt","f":null}]},
+ {"c":[{"v":"inspection","f":null},{"v":"http://tinyurl.com/o7mmzfl","f":null}]},
+ {"c":[{"v":"protein","f":null},{"v":"http://tinyurl.com/ou5hyz2","f":null}]},
+ {"c":[{"v":"chloramphenicol","f":null},{"v":"http://tinyurl.com/ncyygko","f":null}]},
+ {"c":[{"v":"mold","f":null},{"v":"http://tinyurl.com/q8ekw8l","f":null}]} 
+ ]
+ }
+
+

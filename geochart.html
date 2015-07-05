@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+	 
+	  google.load('visualization', '1', {'packages':['annotationchart','table']});
+      google.setOnLoadCallback(GetJson);
+	
+	
+	function GetJson()
+	{
+    var oReq = new XMLHttpRequest(); //New request object
+	
+   	 oReq.onreadystatechange=function()
+  		{
+  			if (oReq.readyState==4 && oReq.status==200)
+    		{
+			 	var result = JSON.parse(oReq.responseText);
+		   		drawChart(result);
+    		}
+  		}
+    oReq.open("get", "get-class-historical.php", true);
+    oReq.send();
+	}
+	 
+   
+	  
+	function drawChart(result)
+	{
+    
+        var data = new google.visualization.DataTable();
+	     var charttable  = new google.visualization.DataTable();
+		data.addColumn('string', 'State');
+        data.addColumn('number', 'Class I');
+        data.addColumn('number', 'Class II');
+        data.addColumn('number', 'Class III');
+		charttable.addColumn('string', 'State'); // Implicit domain label col.
+		charttable.addColumn('number', 'Class'); // Implicit series 1 data col.
+		charttable.addColumn({type:'string', role:'tooltip'}); //
+		
+		for(i = 0; i < result.length; i++) {
+	         data.addRow([result[i].state, result[i].ClassI, result[i].ClassII, result[i].ClassIII] );
+			 charttable.addRow([result[i].state,result[i].ClassI,"Class I:" + result[i].ClassI + "\n Class II:" + result[i].ClassII + "\n Class III:" + result[i].ClassIII]);
+         
+		}
+
+	
+		     var options = {
+         region: 'US',
+         resolution: 'provinces',
+         backgroundColor: 'white',
+         colorAxis: {
+         colors: ['green', 'yellow', 'red', '#ff0000']
+         }
+     };
+
+    
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+		 var table = new google.visualization.Table(document.getElementById('table_div'))
+        chart.draw(charttable, options);
+		var formatter = new google.visualization.BarFormat({width: 120});
+		formatter.format(data, 1); // Apply formatter to second column
+		var formatter1 = new google.visualization.BarFormat({width: 120});
+		formatter1.format(data, 2); // Apply formatter to second column
+		var formatter2 = new google.visualization.BarFormat({width: 120});
+		formatter2.format(data, 3); // Apply formatter to second column
+		
+		
+		 table.draw(data, {allowHtml: true, showRowNumber: true, width: '100%', height: '100%'});
+	  }
+    </script>
+  </head>
+
+  <body>
+   
+    <div id='chart_div'></div>
+ <div id='table_div'></div>
+  </body>
+</html>
