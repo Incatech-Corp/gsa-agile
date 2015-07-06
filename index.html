@@ -324,6 +324,21 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
             <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="col-sm-6">
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#livemap">Current Reports</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#searchFDA">All Reports</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#searchResults">Search</a>
+                    </li>
+                </ul>
                 <form id="foodRecallSubscription_form" action="" method="post">
                         <div class="input-group">
                                 
@@ -444,7 +459,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     </header>
 
 
-    <!-- About Section -->
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
@@ -717,6 +731,28 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     </div>
   </div>
 </div>
+    <!-- Feedback Section -->
+    <section id="feedback" class="content-section">
+        <div class="container">
+             <form action="MAILTO:GSAfeedback@incatech-corp.com" method="post" target="hidden_iframe" id="feedback-form">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="section-subheading text-muted"><label for="feedback_text">Provide Feedback</label></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                                <textarea class="form-control" id="feedback_text" name="feedback_text" rows="8" aria-label=" Must be at least 1 characters."></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">                                
+                            <input class="btn btn-default form-control" type="submit" value="Send Feedback">
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
     <!-- Footer -->
     <footer>
         <div class="container">
