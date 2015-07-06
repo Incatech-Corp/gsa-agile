@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files: 
-  - source: /WAR/GSA.war
+  - source: /WAR/GSA.war 
     destination: /var/www/tomcat/
 permissions:
   - object: /var/www/tomcat/
