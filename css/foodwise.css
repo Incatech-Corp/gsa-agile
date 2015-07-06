@@ -435,7 +435,7 @@ h5 {
     }
     
     .carousel-caption {
-        top: 40px;
+        top: 100px;
     }
     
     .carousel-caption h2 {
@@ -814,9 +814,10 @@ ul.banner-social-buttons {
 
 @media(max-width:766px) {
     .logo {
-    background: url(../img/foodrecallus_logo_300x32.png) no-repeat left center;
-    width: 300px;
-    height: 32px;
+        background: url(../img/foodrecallus_logo_300x32.png) no-repeat left center;
+        width: 300px;
+        height: 32px;
+        margin-top: 1em;
 }
 
 ul.banner-social-buttons li {
@@ -835,7 +836,6 @@ ul.banner-social-buttons li {
         background: url(../img/foodrecallus_logo_279x25.png) no-repeat left center;
         width: 279px;
         height: 25px;
-        margin-top: 1em;
     }
 
     h1 {
