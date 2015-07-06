@@ -427,7 +427,7 @@ h5 {
     }
 
     .carousel-indicators {
-      top: 100px;
+      visibility: hidden;
     }
     
     .carousel-control .glyphicon {
@@ -835,6 +835,7 @@ ul.banner-social-buttons li {
         background: url(../img/foodrecallus_logo_279x25.png) no-repeat left center;
         width: 279px;
         height: 25px;
+        margin-top: 1em;
     }
 
     h1 {
@@ -864,6 +865,13 @@ ul.banner-social-buttons li {
             letter-spacing: 0px;
     }
 
+}
+
+@media(max-width:375px) {
+    .logo {
+        background-size: 80%;
+        width: 180px;
+    }
 }
 
 .tabular-results {
@@ -934,7 +942,7 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
 
 #feedback .btn {
     width: 30%;
-    min-width: 200px;
+    min-width: 145px;
 }
 
 footer {
