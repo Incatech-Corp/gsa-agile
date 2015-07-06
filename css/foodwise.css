@@ -897,6 +897,25 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
 }
 }
 
+#feedback {
+    background-color: #ebedef;
+    color: #828f95;
+    padding: 50px 0;
+}
+
+#feedback label {
+    font-weight: normal;
+}
+
+#feedback textarea {
+    width: 100%;
+}
+
+#feedback .btn {
+    width: 30%;
+    min-width: 200px;
+}
+
 footer {
     background-color: #3c3f47;
     color: #828f95;
