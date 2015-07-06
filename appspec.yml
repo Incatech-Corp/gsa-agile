@@ -3,4 +3,6 @@ os: linux
 files: 
   - source: /
     destination: /var/www/html/
+permissions:
+  - mode: 4755
 
