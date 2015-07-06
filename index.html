@@ -314,7 +314,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll logo" href="#page-top" title="FoodRecall.us - openFDA">
-                    
+                    <span>FoodRecall.us - openFDA</span>
                 </a>
             </div>
            </div><!-- /.col-sm-6 -->
@@ -342,7 +342,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 <form id="foodRecallSubscription_form" action="" method="post">
                         <div class="input-group">
                                 
-                              <input id="email" type="text" class="form-control" placeholder="Enter your email to" title="Submit your email to get FDA Food Recall alerts.">
+                              <input id="subscribe-email" type="text" class="form-control" placeholder="Enter your email to" title="Submit your email to get FDA Food Recall alerts.">
                               <span class="input-group-btn">
                                     <button id="btnSubscribe" class="btn btn-default" type="button">Subscribe</button>
                               </span>
@@ -453,7 +453,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 <a href="#searchResults" class="btn btn-default page-scroll">Search Results</a>
             </div>
             <a href="#about" class="btn btn-circle page-scroll" title="scroll to next section">
-                 <i class="fa fa-arrow-circle-down animated"></i>
+                 <i class="fa fa-arrow-circle-down animated"><span>scroll to next section</span></i>
              </a>
       </div>
     </header>
@@ -484,7 +484,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
       </div>
                         
                         <a href="#livemap" class="btn btn-circle page-scroll" title="scroll to next section">
-                            <i class="fa fa-arrow-circle-down animated"></i>
+                            <i class="fa fa-arrow-circle-down animated"><span>scroll to next section</span></i>
                         </a>
     </section>
     
@@ -507,7 +507,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
           </div>
             <div class="row text-center">
                         <a href="#searchFDA" class="btn btn-circle page-scroll" title="scroll to next section">
-                            <i class="fa fa-arrow-circle-down animated"></i>
+                            <i class="fa fa-arrow-circle-down animated"><span>scroll to next section</span></i>
                         </a>
             </div>
        </div>
@@ -546,7 +546,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
                 <div class="row text-center">
                         <a href="#searchResults" class="btn btn-circle page-scroll" title="scroll to next section">
-                        <i class="fa fa-arrow-circle-down animated"></i>
+                        <i class="fa fa-arrow-circle-down animated"><span>scroll to next section</span></i>
                         </a>
                 </div>
             </div>
@@ -658,6 +658,12 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                     <div><p class="text-muted">Results display here</p></div>
 			</div>
                 </div>
+
+                <div class="row text-center">
+                        <a href="#feedback" class="btn btn-circle page-scroll" title="scroll to next section">
+                        <i class="fa fa-arrow-circle-down animated"><span>scroll to next section</span></i>
+                        </a>
+                </div>
             </div>
         </div>
     </section>
@@ -734,15 +740,38 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     <!-- Feedback Section -->
     <section id="feedback" class="content-section">
         <div class="container">
-             <form action="MAILTO:GSAfeedback@incatech-corp.com" method="post" target="hidden_iframe" id="feedback-form">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2 class="section-subheading text-muted"><label for="feedback_text">Provide Feedback</label></h2>
+                            <h2 class="section-subheading text-muted">Provide Feedback</h2>
+                        </div>
+                    </div>
+             <form id="feedback-form" method="post" action="email.php">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                              <label for="first_name">First Name *</label> 
+                              <input id="first_name" name="first_name" maxlength="50" type="text" class="form-control">                         
+                            </div><!-- /input-group -->
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                              <label for="last_name">Last Name *</label> 
+                              <input id="last_name" name="last_name" maxlength="50" type="text" class="form-control">                         
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div>
+                              <label for="email">Email *</label> 
+                              <input id="email" name="email" maxlength="80" type="text" class="form-control">                         
+                            </div><!-- /input-group -->
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                                <textarea class="form-control" id="feedback_text" name="feedback_text" rows="8" aria-label=" Must be at least 1 characters."></textarea>
+                            <label for="comments">Provide Feedback</label>
+                            <textarea class="form-control" id="comments" name="comments" maxlength="1000"  rows="8" aria-label=" Must be at least 1 characters."></textarea>
                         </div>
                     </div>
                     <div class="row">

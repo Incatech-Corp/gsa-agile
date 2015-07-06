@@ -3,7 +3,7 @@
 ;(function($, window, document, undefined) {
     $(document).ready(function() {
         var emailSubscribeFormWrap = $("#foodRecallSubscription_form");
-        var subscriberEmail = $("#email");
+        var subscriberEmail = $("#subscribe-email");
         
         $("#btnSubscribe", emailSubscribeFormWrap).click(function() {
             //alert(subscriberEmail.val());

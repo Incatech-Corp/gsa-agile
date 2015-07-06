@@ -21,55 +21,55 @@ html {
 
 h1 {
     margin: 0 0 10px;
-	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 47px;
-	letter-spacing: 0px;
+    font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 47px;
+    letter-spacing: 0px;
 }
 
 h2 {
     margin: 0 0 10px;
- 	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 32px;
+    font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;
     letter-spacing: 0px;
 }
 
 h3 {
     margin: 0 0 10px;
     font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 26px;
     letter-spacing: 0px;
 }
 
 h4 {
-    margin: 0 0 10px;
-    font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 20px;
+margin: 0 0 10px;
+font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
     letter-spacing: 0px;
 }
 
 
 h5 {
-	margin: 0 0 10px;
-	font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 16px;
+    margin: 0 0 10px;
+    font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
     letter-spacing: 0px;
 }
 
 h6 {
     margin: 0 0 10px;
     font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
+    font-weight: normal;
+    font-style: normal;
     letter-spacing: 0px;
 }
 
@@ -80,7 +80,7 @@ p {
 }
 
 #searchFDA  {
-	background-color:rgba(255,245,216,1.00);
+    background-color:rgba(255,245,216,1.00);
 }
 
 @media(min-width:767px) {
@@ -91,7 +91,7 @@ p {
     }
 }
 
-a, #livemap i.animated, #searchFDA i.animated {
+a, #livemap i.animated, #searchFDA i.animated, #searchResults i.animated {
     color: #00529b;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -223,6 +223,10 @@ a:focus {
     width: 350px;
     height: 37px;
     margin-top: 5px;
+}
+
+.logo span, .fa-arrow-circle-down span {
+    visibility: hidden;
 }
 
 .intro {
@@ -473,7 +477,7 @@ h5 {
 .btn-circle i.animated {
     display: block;
     margin: 0;
-    margin-left: 1px;
+    margin-left: 4.5px;
 	color: rgba(255,255,255,.5);
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
@@ -912,11 +916,11 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
 #feedback {
     background-color: #ebedef;
     color: #828f95;
-    padding: 50px 0;
+    padding: 5em;
 }
 
 #feedback label {
-    font-weight: normal;
+    margin-top: 1em;
 }
 
 #feedback textarea {
