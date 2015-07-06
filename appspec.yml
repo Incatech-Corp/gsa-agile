@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files: 
-  - source: /
-    destination: /var/www/html/
+  - source: /WAR/GSA.war
+    destination: /var/www/tomcat/
 permissions:
-  - object: /var/www/html/
+  - object: /var/www/tomcat/
     mode: 4755
 
