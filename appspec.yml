@@ -1,7 +1,10 @@
+--- 
+files: 
+  - 
+    destination: /var/www/html/
+    source: /index-test.html
+  - 
+    destination: ~
+    source: ~
+os: linux
 version: 0.0
-os: linux 
-files:
-  - source: /index-test.html
-    destination:  /var/www/html/
-  - source:
-    destination:
