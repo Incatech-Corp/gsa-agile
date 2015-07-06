@@ -345,7 +345,7 @@ a:focus {
   margin-right: -10px;
 }
 
-.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
+.carousel-control .glyphicon-circle-arrow-left {
   left: 50%;
   margin-left: -10px;
 }
@@ -374,6 +374,11 @@ a:focus {
     
     .mobile-caption {
         visibility: hidden;        
+    }
+    
+    .carousel-control {
+        top: 15em;
+        bottom: 15em;
     }
 }
 
@@ -425,8 +430,12 @@ h5 {
       top: 100px;
     }
     
+    .carousel-control .glyphicon {
+        font-size: 40px;
+    }
+    
     .carousel-caption {
-        top: 80px;
+        top: 40px;
     }
     
     .carousel-caption h2 {
