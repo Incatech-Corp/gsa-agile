@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files: 
-  - source: /
+  - source: /test.txt
     destination: /var/www/tomcat/
 permissions:
   - object: /var/www/tomcat/
-    mode: 4755
+    mode: 646
 
