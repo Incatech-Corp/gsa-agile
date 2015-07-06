@@ -20,8 +20,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     <!-- Custom CSS -->
     <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
     <link href="css/foodwise.css" rel="stylesheet">
-    <link href="css/amazon.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -125,7 +123,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
         <script type='text/javascript'>
            function recallResults() {
 			     google.load('visualization', '1', {'packages':['annotationchart','table']});
-               debugger;
+               
                var formState = document.getElementById("searchRecall").elements["state"].value;
                var formReason = document.getElementById("searchRecall").elements["reason"].value;
                var formDescription = document.getElementById("searchRecall").elements["description"].value;
@@ -193,7 +191,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                                 data.addRow(
                   [new Date(result[i].report), result[i].class, result[i].description, result[i].reason]
                   ); }
-				     searchtable.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+				     searchtable.draw(data, {showRowNumber: false, width: '100%', height: '500'});
                                   
                     
               }
@@ -315,7 +313,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll logo" href="#page-top">
+                <a class="navbar-brand page-scroll logo" href="#page-top" title="FoodRecall.us - openFDA">
                     
                 </a>
             </div>
@@ -329,7 +327,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 <form id="foodRecallSubscription_form" action="" method="post">
                         <div class="input-group">
                                 
-                              <input id="email" type="text" class="form-control" placeholder="Submit your email to get FDA Food Recall alerts.">
+                              <input id="email" type="text" class="form-control" placeholder="Submit your email to get FDA Food Recall alerts." title="Submit your email to get FDA Food Recall alerts.">
                               <span class="input-group-btn">
                                     <button id="btnSubscribe" class="btn btn-default" type="button">Subscribe</button>
                               </span>
@@ -363,9 +361,9 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
       <img src="img/new_heat_map_for_hero_box_1200x700.png" alt="Heat Map">
       <div class="carousel-caption">
           <div class="container">
-            <h1>Heat Up FDA’s Latest <br>
+            <h2>Heat Up FDA’s Latest <br>
               Food Recall Data.<br>
-            </h1>
+            </h2>
             <h3>See the most recent Enforcement Reports by State.</h3>
             <div class="intro-stats">
                 <h2>8,019</h2>
@@ -378,9 +376,9 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
       <img src="img/new_word_cloud_for_hero_box_1200x700.png" alt="Word Cloud">
       <div class="carousel-caption">
           <div class="container">
-            <h1>Let our Tag Cloud Offer<br>
+            <h2>Let our Tag Cloud Offer<br>
               Deeper Insights Into FDA Recalls.<br>
-            </h1>
+            </h2>
             <h3>The more often a word appears in your search, the bigger it gets.</h3>
             <div class="intro-stats">
                 <h2>8,019</h2>
@@ -390,12 +388,12 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
       </div>
     </div>
     <div class="map-timeline item">
-      <img src="img/new_timeline_for_hero_box_1200x700.png" alt="Word Cloud">
+      <img src="img/new_timeline_for_hero_box_1200x700.png" alt="Timeline">
       <div class="carousel-caption">
           <div class="container">
-            <h1>Our Timeline Tool Moves <br>
+            <h2>Our Timeline Tool Moves <br>
               Mountains of Historical Data.<br>
-            </h1>
+            </h2>
             <h3>See the most relevant recall data since 2012.</h3>
             <div class="intro-stats">
                 <h2>8,019</h2>
@@ -405,12 +403,12 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
       </div>
     </div>
     <div class="map-geo item">
-      <img src="img/new_geomap_for_hero_box_1200x700.png" alt="Timeline">
+      <img src="img/new_geomap_for_hero_box_1200x700.png" alt="GeoMap">
       <div class="carousel-caption">
           <div class="container">
-            <h1>Find the Food Safety <br>
+            <h2>Find the Food Safety <br>
               Recalls in Your State.<br>
-            </h1>
+            </h2>
             <h3>Use our geomap to visualize FDA recall information.</h3>
             <div class="intro-stats">
                 <h2>8,019</h2>
@@ -424,11 +422,11 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
@@ -439,7 +437,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 </div>
                 <a href="#searchResults" class="btn btn-default page-scroll">Search Results</a>
             </div>
-            <a href="#about" class="btn btn-circle page-scroll">
+            <a href="#about" class="btn btn-circle page-scroll" title="scroll to next section">
                  <i class="fa fa-arrow-circle-down animated"></i>
              </a>
       </div>
@@ -471,7 +469,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
           </div>
       </div>
                         
-                        <a href="#livemap" class="btn btn-circle page-scroll">
+                        <a href="#livemap" class="btn btn-circle page-scroll" title="scroll to next section">
                             <i class="fa fa-arrow-circle-down animated"></i>
                         </a>
     </section>
@@ -494,7 +492,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
           </div>
             <div class="row text-center">
-                        <a href="#searchFDA" class="btn btn-circle page-scroll">
+                        <a href="#searchFDA" class="btn btn-circle page-scroll" title="scroll to next section">
                             <i class="fa fa-arrow-circle-down animated"></i>
                         </a>
             </div>
@@ -533,7 +531,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                 </div>
 
                 <div class="row text-center">
-                        <a href="#searchResults" class="btn btn-circle page-scroll">
+                        <a href="#searchResults" class="btn btn-circle page-scroll" title="scroll to next section">
                         <i class="fa fa-arrow-circle-down animated"></i>
                         </a>
                 </div>
@@ -555,23 +553,23 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                     <form id="searchRecall" name="searchRecall">
                       <div class="col-sm-4">
                         <div class="input-group">
-                          <label id="description">Product: </label> 
+                          <label for="description">Product: </label> 
                           <input id="description" name="description" type="text" class="form-control" value="">
-                          <label id="reason">Reason<br>
+                          <label for="reason">Reason<br>
                             for Recall: </label>
                           <input id="reason" name="reason" type="text" class="form-control" value="">                          
                         </div><!-- /input-group -->
                       </div><!-- /.col-sm-4 -->
                       <div class="col-sm-4">
                         <div class="input-group">
-                              <label id="class">Severity: </label> 
+                              <label for="class">Severity: </label> 
                               <select id="class" name="class" class="form-control">
                                   <option value="" selected="selected">Select the Severity</option>
                                   <option value="Class I">Class I Recall (most critical)</option>
                                   <option value="Class II">Class II Recall (most critical)</option>
                                   <option value="Class III">Class III Recall (less critical)</option>
                               </select>       
-                          <label id="state">State: </label> 
+                          <label for="state">State: </label> 
                           <select id="state" name="state" class="form-control">
                               <option value="" selected="selected">Select a State</option>
     <option value="AL">Alabama</option>
@@ -643,8 +641,8 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                        
                         
 				
+                    <div><p class="text-muted">Results display here</p></div>
 			</div>
-			<div><p>Whatever content below table</p></div>
                 </div>
             </div>
         </div>
@@ -743,9 +741,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
-
-    <!-- DatePicker -->
-    <script src="js/bootstrap-datepicker.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
