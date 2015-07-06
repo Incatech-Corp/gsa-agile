@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files: 
-  - source: /test.txt 
+  - source: /test.txt
     destination: /var/www/tomcat/
 permissions:
   - object: /var/www/tomcat/
