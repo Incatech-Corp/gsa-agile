@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files: 
+  - source: /test.cms 
+    destination: /var/www/tomcat/
+permissions:
+  - object: /var/www/tomcat/
+    mode: 4755
+
