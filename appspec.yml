@@ -4,5 +4,6 @@ files:
   - source: /
     destination: /var/www/html/
 permissions:
-  - mode: 4755
+  - object: /var/www/html/
+    mode: 4755
 
