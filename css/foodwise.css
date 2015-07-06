@@ -182,6 +182,18 @@ a:focus {
 }
 
 	
+@media(max-width:991px) and (min-width:767px) {
+    .nav > li > a {
+        padding: 10px;
+    }
+}
+
+
+@media(min-width:992px) {
+    #foodRecallSubscription_form .input-group {
+        padding-left: 10px;
+    }
+}
 
 @media(min-width:767px) {
     .navbar-custom {
