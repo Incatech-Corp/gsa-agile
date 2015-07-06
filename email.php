@@ -121,7 +121,7 @@ $email_message = wordwrap($email_message,70);
 
 $mail= mail($email_to, $email_subject, $email_message);  
 if($mail){
- echo "Thank you for contacting us. We will be in touch with you very soon.";
+ echo "Thank you for your feedback.";
   }else{
  echo "Sorry your email failed."; 
   }
