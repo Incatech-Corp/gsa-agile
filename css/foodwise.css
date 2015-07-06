@@ -312,6 +312,40 @@ a:focus {
     }
 }
 
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+
+.carousel-control .glyphicon-circle-arrow-right {
+  right: 50%;
+  margin-right: -10px;
+}
+
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
+  left: 50%;
+  margin-left: -10px;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;  
+      font-size: 2.5em;      
+    }
+    
+    .carousel-control .glyphicon-circle-arrow-right {
+      margin-right: -15px;
+    }
+
+    .carousel-control .glyphicon-circle-arrow-left {
+      margin-left: -15px;
+    }
+}
+
 @media(max-width:766px) {
 	
 h1 {
@@ -661,17 +695,17 @@ a.data-button {
 }
 
 .google-visualization-table-table {
-    width: 100%;
+    width: 100% !important;
     max-width: 100%;
     border-collapse: collapse;
 }
 
-.google-visualization-table-table > thead > tr > th {
+.google-visualization-table-table > thead > tr > th, iframe th.google-visualization-table-th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
 
-.google-visualization-table-table > tbody > tr > td, .google-visualization-table-table > tbody > tr > th, .google-visualization-table-table > tfoot > tr > td, .google-visualization-table-table > tfoot > tr > th, .google-visualization-table-table > thead > tr > td, .google-visualization-table-table > thead > tr > th {
+.google-visualization-table-table > tbody > tr > td, .google-visualization-table-table > tbody > tr > th, .google-visualization-table-table > tfoot > tr > td, .google-visualization-table-table > tfoot > tr > th, .google-visualization-table-table > thead > tr > td, .google-visualization-table-table > thead > tr > th, iframe td.googft-table-cell, iframe th.google-visualization-table-th {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
@@ -794,6 +828,11 @@ ul.banner-social-buttons li {
 
 .tabular-results td:first-child, .tabular-results td:nth-child(2), .tabular-results th:first-child, .tabular-results th:nth-child(2) {
     width: 15%;
+}
+
+.tabular-results td:last-child, .tabular-results td:nth-child(3), .tabular-results th:last-child, .tabular-results th:nth-child(3) {
+    width: 35%;
+    text-align: left;
 }
 
 @media(min-width:992px) {
