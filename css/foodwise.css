@@ -19,7 +19,7 @@ html {
     height: 100%;
 }
 
-h1 {
+h1, #about h2 {
     margin: 0 0 10px;
     font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
     font-weight: normal;
@@ -46,7 +46,7 @@ h3 {
     letter-spacing: 0px;
 }
 
-h4 {
+h4, .heatmap-section-caption h3 {
 margin: 0 0 10px;
 font-family: MuseoSans-300,Helvetica,Arial,sans-serif;
     font-weight: normal;
@@ -225,10 +225,6 @@ a:focus {
     margin-top: 5px;
 }
 
-.logo span, .fa-arrow-circle-down span {
-    visibility: hidden;
-}
-
 .intro {
     display: table;
     width: 100%;
@@ -383,21 +379,21 @@ a:focus {
 
 @media(max-width:766px) {
 	
-h1 {
+h1, #about h2 {
     margin: 0 0 10px;
-	font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 30px;
-	letter-spacing: 0px;
+    font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 0px;
 }
 
 h2 {
     margin: 0 0 10px;
     font-family: MuseoSans-700,Helvetica,Arial,sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
     letter-spacing: 0px;
 }
 
@@ -477,7 +473,7 @@ h5 {
 .btn-circle i.animated {
     display: block;
     margin: 0;
-    margin-left: 4.5px;
+    margin-left: .5px;
 	color: rgba(255,255,255,.5);
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
