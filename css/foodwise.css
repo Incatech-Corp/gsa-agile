@@ -430,7 +430,7 @@ h5 {
     }
     
     .carousel-caption h2 {
-        font-size: 1.5em;
+        font-size: 1.5em !important;
     }
     
     .carousel-caption .intro-stats, .carousel-caption a.page-scroll {
