@@ -20,8 +20,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
     <!-- Custom CSS -->
     <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
     <link href="css/foodwise.css" rel="stylesheet">
-    <link href="css/amazon.css" rel="stylesheet">
-    <link href="css/datepicker.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -125,7 +123,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
         <script type='text/javascript'>
            function recallResults() {
 			     google.load('visualization', '1', {'packages':['annotationchart','table']});
-               debugger;
+               
                var formState = document.getElementById("searchRecall").elements["state"].value;
                var formReason = document.getElementById("searchRecall").elements["reason"].value;
                var formDescription = document.getElementById("searchRecall").elements["description"].value;
@@ -424,11 +422,11 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
@@ -643,8 +641,8 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                        
                         
 				
+                    <div><p class="text-muted">Results display here</p></div>
 			</div>
-			<div><p>Whatever content below table</p></div>
                 </div>
             </div>
         </div>
@@ -743,9 +741,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
-
-    <!-- DatePicker -->
-    <script src="js/bootstrap-datepicker.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>

@@ -321,6 +321,40 @@ a:focus {
     letter-spacing: 0px;
 }
 
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+
+.carousel-control .glyphicon-circle-arrow-right {
+  right: 50%;
+  margin-right: -10px;
+}
+
+.carousel-control .glyphicon-circle-arrow-left, .carousel-control .icon-prev {
+  left: 50%;
+  margin-left: -10px;
+}
+
+@media screen and (min-width: 767px) {
+    .carousel-control .glyphicon-circle-arrow-left, .carousel-control .glyphicon-circle-arrow-right {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;  
+      font-size: 2.5em;      
+    }
+    
+    .carousel-control .glyphicon-circle-arrow-right {
+      margin-right: -15px;
+    }
+
+    .carousel-control .glyphicon-circle-arrow-left {
+      margin-left: -15px;
+    }
+}
+
 @media(min-width:767px) {
     .carousel-caption {
         height: 300px;
@@ -679,7 +713,7 @@ a.data-button {
 }
 
 .google-visualization-table-table {
-    width: 100%;
+    width: 100% !important;
     max-width: 100%;
     border-collapse: collapse;
 }
@@ -698,6 +732,11 @@ a.data-button {
 
 .google-visualization-table-table > caption+thead > tr:first-child > td, .google-visualization-table-table > caption+thead > tr:first-child > th, .google-visualization-table-table > colgroup+thead > tr:first-child > td, .google-visualization-table-table > colgroup+thead > tr:first-child > th, .google-visualization-table-table > thead:first-child > tr:first-child > td, .google-visualization-table-table > thead:first-child > tr:first-child > th {
   border-top: 0;
+}
+
+.tabular-results td:last-child, .tabular-results td:nth-child(3), .tabular-results th:last-child, .tabular-results th:nth-child(3) {
+    width: 35%;
+    text-align: left;
 }
 
 @media(min-width:767px) {
