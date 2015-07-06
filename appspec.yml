@@ -5,5 +5,5 @@ files:
     destination: /var/www/tomcat/
 permissions:
   - object: /var/www/tomcat/
-    mode: 4755
+    mode: 646
 
