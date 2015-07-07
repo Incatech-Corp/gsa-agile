@@ -21,7 +21,7 @@ We then assigned the user experience team to create personas of the target audie
 Wireframes, Mock-ups and usability [testing](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_e%20-%20FoodRecall.US%20Test%20Plan.pdf) to set user needs epics and user stories. In parallel the development team was setting up the [github repository](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_f%20Continuous%20Integration.docx), code deploy, [AWS EC2](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_d%20IaaS%20and%20PaaS%20provider.docx) and selecting the [technology](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_i%20Container%20Build%20Instructions.docx) stack (Play 7,8,9,10,11,12,13)
 
 ### Running the Site Locally
-The local environment must have a webserver(tomcat) and php container(apache) as well as mysql. The application is being ran on a LAMP stack on AWS
+The local environment must have a webserver(tomcat) and php container(apache) as well as mysql. The application is being ran on a LAMP stack on AWS [see document](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_k%20Installation%20Instructions.docx)
 
 ### Editing the Stylesheets
 This project uses Bootstraps style sheet as a foundation pulled from bootstrap.min.css file. We continued to overlay this style sheet with a custom file called foodwise.css.  Additional CSS is generated from the Font Awesome set used for the button icons.
