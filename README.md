@@ -18,7 +18,7 @@ Vision: Usable, responsive site that informs the consumers of recalls
 
 We then assigned the user experience team to create personas of the target audiences.   We held a focus group to drill down on needs(Play 3). The results from this sculpted the approach and design.  We then white-boarded the design for an application the overarching ideas was visualize the data in a way that the consumer can see how it impacts them to drive usage (Play 2).
 
-Wireframes, Mock-ups and usability [testing](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_e%20-%20FoodRecall.US%20Test%20Plan.pdf) to set user needs epics and user stories. In parallel the development team was setting up the github repository, code deploy, [AWS EC2](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_d%20IaaS%20and%20PaaS%20provider.docx) and selecting the technology stack (Play 7,8,9,10,11,12,13)
+Wireframes, Mock-ups and usability [testing](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_e%20-%20FoodRecall.US%20Test%20Plan.pdf) to set user needs epics and user stories. In parallel the development team was setting up the [github repository](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_f%20Continuous%20Integration.docx), code deploy, [AWS EC2](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_d%20IaaS%20and%20PaaS%20provider.docx) and selecting the technology stack (Play 7,8,9,10,11,12,13)
 
 ### Running the Site Locally
 The local environment must have a webserver(tomcat) and php container(apache) as well as mysql. The application is being ran on a LAMP stack on AWS
