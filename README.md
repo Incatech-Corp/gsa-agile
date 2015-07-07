@@ -13,7 +13,7 @@ Business Owner: CEO INCATech final say on business wants and needs for the proje
 Project Lead: CIO INCATech the person accountable for the project(Play 6 & 7)
 Api: https://api.fda.gov/food/enforcement.json
 Audiences: Main: Consumers, Secondary: Researchers, Food Industry
-Mission: Utilize the optimal technology to deliver products
+Mission: Utilize the optimal [technology](https://github.com/Incatech-Corp/gsa-agile/blob/master/documents/Pool%202%20Evidence%20Item_c%20Technology%20Used.docx) to deliver products
 Vision: Usable, responsive site that informs the consumers of recalls
 
 We then assigned the user experience team to create personas of the target audiences.   We held a focus group to drill down on needs(Play 3). The results from this sculpted the approach and design.  We then white-boarded the design for an application the overarching ideas was visualize the data in a way that the consumer can see how it impacts them to drive usage (Play 2).
