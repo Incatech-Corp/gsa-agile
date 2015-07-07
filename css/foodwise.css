@@ -929,20 +929,29 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
 #feedback {
     background-color: #ebedef;
     color: #828f95;
-    padding: 5em;
 }
 
 #feedback label {
+    display: block;
     margin-top: 1em;
 }
 
 #feedback textarea {
     width: 100%;
+    height: 180px;
 }
 
 #feedback .btn {
+    float: right;
     width: 30%;
     min-width: 145px;
+    margin-top: 1em;
+}
+
+@media(min-width:767px) {
+    #feedback {
+        padding: 5em;
+    }
 }
 
 footer {

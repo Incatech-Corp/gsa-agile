@@ -746,35 +746,18 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
                     </div>
              <form id="feedback-form" method="post" action="email.php">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="input-group">
+                        <div class="col-sm-4">
                               <label for="first_name">First Name *</label> 
-                              <input id="first_name" name="first_name" maxlength="50" type="text" class="form-control">                         
-                            </div><!-- /input-group -->
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="input-group">
+                              <input id="first_name" name="first_name" maxlength="50" type="text" class="form-control">
                               <label for="last_name">Last Name *</label> 
-                              <input id="last_name" name="last_name" maxlength="50" type="text" class="form-control">                         
-                            </div><!-- /input-group -->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div>
+                              <input id="last_name" name="last_name" maxlength="50" type="text" class="form-control">    
                               <label for="email">Email *</label> 
-                              <input id="email" name="email" maxlength="80" type="text" class="form-control">                         
-                            </div><!-- /input-group -->
+                              <input id="email" name="email" maxlength="80" type="text" class="form-control"> 
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <label for="comments">Provide Feedback</label>
-                            <textarea class="form-control" id="comments" name="comments" maxlength="1000"  rows="8" aria-label=" Must be at least 1 characters."></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 text-center">                                
+                        <div class="col-sm-8">
+                            <label for="comments">Comments *</label>
+                            <textarea class="form-control" id="comments" name="comments" maxlength="1000" rows="6" aria-label=" Must be at least 1 characters."></textarea>
+                            
                             <input class="btn btn-default form-control" type="submit" value="Send Feedback">
                         </div>
                     </div>
